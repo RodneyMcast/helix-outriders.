@@ -1,114 +1,73 @@
 import React from 'react';
 
 const Reviews = () => {
-  const reviews = [
-    {
-      publication: "IGN",
-      quote: "Tense, treacherous, and terrifying. Helix Outriders redefines the extraction shooter with brutal innovation.",
-      rating: "9.5/10",
-      imagePlaceholder: "/path-to-your-image-1.jpg" // Replace with your actual image path
-    },
-    {
-      publication: "GAMESPOT",
-      quote: "Every extraction feels like escaping hell itself. A masterclass in tension and teamwork.",
-      rating: "9/10",
-      imagePlaceholder: "/path-to-your-image-2.jpg"
-    },
-    {
-      publication: "PC GAMER",
-      quote: "The Death Echo system turns failure into the most intense moments of redemption in gaming.",
-      rating: "92/100",
-      imagePlaceholder: "/path-to-your-image-3.jpg"
-    }
-  ];
-
   return (
-    <section className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 py-24 px-4 relative overflow-hidden">
+    <section className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 py-12 md:py-16 lg:py-24 px-4 relative overflow-hidden">
       {/* Atmospheric effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(6,182,212,0.06),transparent_60%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(249,115,22,0.06),transparent_60%)]"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-20">
-          <div className="inline-block mb-6">
-            <span className="text-cyan-400 text-xs font-bold tracking-[0.4em] uppercase">
-              Critical Acclaim
-            </span>
-          </div>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-cyan-300 to-orange-500">
+        <div className="text-left mb-8 md:mb-12 lg:mb-16">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-3">
+            <span className="text-white">
               WHAT THE PRESS SAYS
             </span>
           </h2>
         </div>
 
-        {/* Review Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6">
-          {reviews.map((review, index) => (
-            <div
-              key={index}
-              className="group relative aspect-[3/4] rounded-xl overflow-hidden"
-              style={{
-                transform: `rotate(${index % 2 === 0 ? '-1deg' : '1deg'})`
-              }}
-            >
-              {/* Background Image Placeholder */}
-              <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900">
-                {/* This is where your image goes - replace the gradient with: */}
-                {/* <img src={review.imagePlaceholder} alt="" className="w-full h-full object-cover" /> */}
-                <div className="w-full h-full flex items-center justify-center text-slate-600 text-sm">
-                  [Background Image {index + 1}]
-                </div>
-              </div>
-
-              {/* Dark Overlay Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/60 to-slate-950/20"></div>
+        {/* Review Card - Full Width */}
+        <div className="w-full">
+          <div className="relative w-full rounded-none md:rounded-lg overflow-hidden bg-slate-950">
+            {/* Background Image */}
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+              <img 
+                src="src/Images/Reviews IGN.png" 
+                alt="IGN Review Background" 
+                className="absolute inset-0 w-full h-full object-cover object-center"
+              />
               
-              {/* Vignette effect */}
-              <div className="absolute inset-0 shadow-[inset_0_0_100px_rgba(0,0,0,0.7)]"></div>
+              {/* Dark Overlay - stronger on left, fades to right */}
+              <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/60 to-transparent"></div>
+              
+              {/* Additional bottom gradient for text readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+            </div>
 
-              {/* Glow effect on hover */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-cyan-500/10 via-transparent to-transparent"></div>
-
-              {/* Content */}
-              <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                {/* Rating Badge */}
-                <div className="mb-4">
-                  <span className="inline-block px-4 py-2 bg-cyan-500/20 backdrop-blur-sm border border-cyan-500/30 rounded-lg text-cyan-400 font-bold text-lg">
-                    {review.rating}
+            {/* Content Overlay - Positioned absolute over image */}
+            <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-6 lg:p-8 xl:p-12">
+              <div className="max-w-2xl">
+                {/* Rating */}
+                <div className="mb-3 md:mb-4">
+                  <span className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
+                    9.5/10
                   </span>
                 </div>
 
                 {/* Publication */}
-                <h3 className="text-3xl font-bold text-white mb-4 tracking-wider drop-shadow-lg">
-                  {review.publication}
-                </h3>
-
-                {/* Quote */}
-                <div className="relative">
-                  <div className="absolute -left-3 top-0 text-6xl text-cyan-500/30 font-serif leading-none">
-                    "
-                  </div>
-                  <p className="text-gray-200 text-lg leading-relaxed pl-6 drop-shadow-md">
-                    {review.quote}
-                  </p>
+                <div className="mb-2 md:mb-3">
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white tracking-wide">
+                    IGN
+                  </h3>
                 </div>
 
-                {/* Bottom accent line */}
-                <div className="mt-6 h-1 w-24 bg-gradient-to-r from-cyan-500 to-orange-500 group-hover:w-full transition-all duration-500"></div>
-              </div>
+                {/* Divider */}
+                <div className="w-12 md:w-16 h-0.5 bg-gradient-to-r from-cyan-500 to-orange-500 mb-3 md:mb-4"></div>
 
-              {/* Border on hover */}
-              <div className="absolute inset-0 border-2 border-transparent group-hover:border-cyan-500/30 transition-all duration-300 rounded-xl pointer-events-none"></div>
+                {/* Quote */}
+                <blockquote className="text-base md:text-lg lg:text-xl text-gray-200 leading-relaxed font-light">
+                  "Tense, treacherous, and terrifying. Helix Outriders redefines the extraction shooter with brutal innovation."
+                </blockquote>
+              </div>
             </div>
-          ))}
+          </div>
         </div>
 
-        {/* Bottom text */}
-        <div className="text-center mt-20">
-          <p className="text-gray-400 text-lg italic">
-            "The best extraction shooter of the generation"
+        {/* Footer Text */}
+        <div className="mt-8 md:mt-12 lg:mt-16 text-center md:text-left">
+          <p className="text-sm md:text-base text-gray-500">
+            © 2025 Helix Outriders. All rights reserved.
           </p>
         </div>
       </div>
