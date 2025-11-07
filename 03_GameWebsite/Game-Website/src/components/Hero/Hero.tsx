@@ -3,14 +3,23 @@ import './Hero.css'
 export default function Hero() {
   return (
     <section className="hero">
-      <div className="container">
-        <span className="kicker">Available now</span>
-        <h1 className="h1">
-          Because sometimes the real enemy is <em className="highlight">your teammate</em>.
+      <div className="hero__bg" aria-hidden="true" />
+      <div className="hero__inner container">
+        {/* Outline-only heading */}
+        <h1 className="hero__title" aria-label="Now Available">
+          NOW AVAILABLE
         </h1>
-        <p className="sub">
-          Squad up, drop into infected zones, betray or be betrayed. Extract what matters — if you make it out alive.
-        </p>
+
+        {/* Subline with PS5 logo */}
+        <div className="hero__availability" role="note" aria-label="Only available on PlayStation 5">
+          <span className="hero__only">Only available</span>
+          <img
+            className="hero__ps5"
+            src="/src/assets/platform-playstation.svg"  /* swap to a PS5 logo if you have one */
+            alt="PS5"
+            height={22}
+          />
+        </div>
       </div>
     </section>
   )
