@@ -4,7 +4,8 @@ export default function Hero() {
   return (
     <section className="hero">
       <div className="hero__bg" aria-hidden="true" />
-      <div className="hero__inner container">
+          <div className="hero__inner container">
+              
         {/* Outline-only heading */}
         <h1 className="hero__title" aria-label="Now Available">
           NOW AVAILABLE
@@ -15,7 +16,7 @@ export default function Hero() {
           <span className="hero__only">Only available</span>
           <img
             className="hero__ps5"
-            src="/src/assets/platform-playstation.svg"  /* swap to a PS5 logo if you have one */
+            src="src/Images/PS5-Logo.png" 
             alt="PS5"
             height={22}
           />
