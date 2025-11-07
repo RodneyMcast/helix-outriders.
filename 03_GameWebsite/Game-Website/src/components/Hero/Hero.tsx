@@ -13,7 +13,7 @@ export default function Hero() {
 
         {/* Subline with PS5 logo */}
         <div className="hero__availability" role="note" aria-label="Only available on PlayStation 5">
-          <span className="hero__only">Only available</span>
+          <span className="hero__only">Only available on</span>
           <img
             className="hero__ps5"
             src="src/Images/PS5-Logo.png" 
