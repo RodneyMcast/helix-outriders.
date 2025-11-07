@@ -1,0 +1,85 @@
+/* ============ FONT ============ */
+/* Put file at: src/assets/fonts/couture.woff2  */
+@font-face{
+  font-family: "Couture";
+  src: url("../../assets/fonts/couture.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+.font-couture { font-family: "Couture", sans-serif; }
+
+/* ============ BASE ============ */
+.reviews {
+  background: linear-gradient(180deg, #0b1219, #0b1219 30%, #0a0e13);
+  padding: 3rem 1rem;
+}
+.reviews__container { max-width: 80rem; margin: 0 auto; }
+.reviews__title {
+  color:#fff; font-size:2rem; font-weight:800; letter-spacing:.02em; margin-bottom:1.75rem;
+}
+
+/* ============ CARD ============ */
+.reviews__card {
+  position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden;
+  border-radius: .75rem; background:#0b0f14;
+  box-shadow: 0 .625rem 2.5rem rgba(0,0,0,.45);
+}
+
+/* layer order using z-index */
+.reviews__bg {
+  position:absolute; inset:0; background-size:cover; background-position:center; z-index:0;
+}
+.reviews__imageShade {
+  position:absolute; inset:0; z-index:1; pointer-events:none;
+  background:
+    radial-gradient(80rem 40rem at 70% 50%, rgba(0,0,0,.7), transparent 60%),
+    linear-gradient(0deg, rgba(0,0,0,.25), rgba(0,0,0,.25));
+}
+
+/* ============ RIGHT PANEL ============ */
+.reviews__panel {
+  position:absolute; top:0; right:0; height:100%;
+  width: clamp(18rem, 35%, 26rem);          /* ~36% like your Figma */
+  background: linear-gradient(270deg,
+    rgba(10,12,15,.95) 0%,
+    rgba(10,12,15,.88) 55%,
+    rgba(10,12,15,0) 100%);
+  backdrop-filter: blur(4px);
+  z-index: 2; /* above image + shade */
+}
+.reviews__panelInner {
+  position:absolute; inset:0; display:flex; flex-direction:column;
+  justify-content:center; align-items:flex-start; padding: 2rem;
+}
+
+/* headline */
+.reviews__headline {
+  margin: 0 0 1.25rem 0;
+  text-transform: uppercase; color:#f3f4f6;
+  font-weight: 700; line-height: 1.1;
+  font-size: clamp(1.25rem, 2.2vw + .6rem, 3rem); /* rem-based + responsive */
+  letter-spacing: .04em;
+}
+.reviews__headline span { display:block; }
+
+/* source line */
+.reviews__source { display:flex; align-items:center; gap:.6rem; }
+.reviews__dash { width: 2rem; height: .15rem; background:#e5e7eb; opacity:.85; border-radius: 999px; }
+.reviews__ign { font-weight:700; color:#ef4444; letter-spacing:.08em; }
+
+/* footer */
+.reviews__foot { color:#94a3b8; font-size:.95rem; margin-top:2rem; }
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 48rem) {
+  .reviews { padding: 2rem 1rem; }
+  .reviews__title { font-size: 1.75rem; }
+  .reviews__panel { width: 55%; }          /* wider panel on small screens */
+  .reviews__panelInner { padding: 1.25rem; }
+}
+@media (min-width: 64rem) {
+  .reviews { padding: 6rem 2rem; }
+  .reviews__title { font-size: 2.5rem; margin-bottom: 2rem; }
+  .reviews__panelInner { padding: 2.25rem; }
+}
