@@ -6,7 +6,7 @@ const Reviews: React.FC = () => {
   return (
     <section className="reviews">
       <div className="reviews__container">
-        <h2 className="reviews__title">WHAT THE PRESS SAYS</h2>
+        
 
         <article className="reviews__card" aria-label="IGN Review for Helix Outriders">
           {/* background image */}
@@ -33,7 +33,7 @@ const Reviews: React.FC = () => {
           </aside>
         </article>
 
-        <p className="reviews__foot">© 2025 Helix Outriders. All rights reserved.</p>
+       
       </div>
     </section>
   );

@@ -35,41 +35,41 @@
 .ft__brand-name {
     display: block;
     font-weight: 700;
-    margin-bottom: 14px
+    margin-bottom: 14px;
 }
 
 .ft__menu {
     display: flex;
     flex-wrap: wrap;
-    gap: 26px
+    gap: 26px;
 }
 
 .ft__menu a {
     color: var(--ft-text);
     text-decoration: none;
-    opacity: .9
+    opacity: .9;
 }
 
 .ft__menu a:hover {
-    opacity: 1
+    opacity: 1;
 }
 
 .ft__socials {
     display: flex;
     align-items: center;
-    gap: 16px
+    gap: 16px;
 }
 
 .ft__socials-label {
     font-size: 12px;
     letter-spacing: .12em;
     text-transform: uppercase;
-    color: var(--ft-muted)
+    color: var(--ft-muted);
 }
 
 .ft__socials-icons {
     display: flex;
-    gap: 14px
+    gap: 14px;
 }
 
 .ft__socials-icons a {
@@ -80,25 +80,25 @@
     justify-content: center;
     border-radius: 50%;
     background: rgba(255, 255, 255, .06);
-    border: 1px solid var(--ft-stroke)
+    border: 1px solid var(--ft-stroke);
 }
 
 .ft__socials-icons svg {
     width: 16px;
     height: 16px;
     fill: #fff;
-    opacity: .9
+    opacity: .9;
 }
 
 .ft__socials-icons a:hover svg {
-    opacity: 1
+    opacity: 1;
 }
 
 /* Rule */
 .ft__rule {
     border: 0;
     border-top: 1px solid var(--ft-stroke);
-    margin: 12px 0 18px
+    margin: 12px 0 18px;
 }
 
 /* Mid */
@@ -115,20 +115,20 @@
     color: var(--ft-muted);
     line-height: 1.6;
     font-size: 14px;
-    max-width: 900px
+    max-width: 900px;
 }
 
 .ft__rating img {
     height: 90px;
     width: auto;
     border: 1px solid var(--ft-stroke);
-    background: #fff
+    background: #fff;
 }
 
 /* Bottom */
 .ft__bottom {
     background: #14171a;
-    border-top: 1px solid var(--ft-stroke)
+    border-top: 1px solid var(--ft-stroke);
 }
 
 .ft__bottom-inner {
@@ -143,30 +143,30 @@
     height: 12rem;
     width: auto;
     filter: grayscale(1) brightness(1.4);
-    opacity: .9
+    opacity: .9;
 }
 
 .ft__links {
     display: flex;
     flex-wrap: wrap;
     gap: 22px;
-    justify-content: center
+    justify-content: center;
 }
 
 .ft__links a {
     color: var(--ft-text);
     text-decoration: none;
-    opacity: .9
+    opacity: .9;
 }
 
 .ft__links a:hover {
-    opacity: 1
+    opacity: 1;
 }
 
 .ft__selectors {
     display: flex;
     gap: 16px;
-    align-items: center
+    align-items: center;
 }
 
 .ft__select {
@@ -174,7 +174,7 @@
     flex-direction: column;
     gap: 6px;
     font-size: 14px;
-    color: var(--ft-muted)
+    color: var(--ft-muted);
 }
 
 .ft__select select {
@@ -209,17 +209,17 @@
 .ft__legal-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 18px
+    gap: 18px;
 }
 
 .ft__legal-links a {
     color: var(--ft-text);
     text-decoration: none;
-    opacity: .9
+    opacity: .9;
 }
 
 .ft__legal-links a:hover {
-    opacity: 1
+    opacity: 1;
 }
 
 .ft__privacy-choices {
@@ -235,7 +235,7 @@
 }
 
 .ft__privacy-icon {
-    color: #78baf7
+    color: #78baf7;
 }
 
 /* Trust badge */
@@ -243,59 +243,284 @@
     height: 48px;
     width: auto;
     display: block;
-    filter: grayscale(.2)
+    filter: grayscale(.2);
 }
 
-/* Responsive */
+/* ===================== Responsive ===================== */
+
+/* Laptops and down */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .ft__company-logo {
+        height: 9rem;
+    }
+}
+
+/* Tablets and down */
 @media (max-width: 992px) {
     .ft__mid {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
     }
 
     .ft__rating {
-        justify-self: start
+        justify-self: start;
+    }
+
+    .ft__disclaimer {
+        max-width: 100%;
+    }
+
+    .ft__company-logo {
+        height: 8rem;
+    }
+
+    .ft__bottom-inner {
+        grid-template-columns: auto 1fr;
     }
 }
 
+/* Small tablets and large phones */
 @media (max-width: 768px) {
     .ft__top {
         flex-direction: column;
-        gap: 18px
+        gap: 18px;
+        padding-top: 22px;
+    }
+
+    .ft__menu {
+        gap: 18px;
     }
 
     .ft__socials {
-        justify-content: space-between
+        justify-content: space-between;
+    }
+
+    .ft__company-logo {
+        height: 6.5rem;
     }
 
     .ft__bottom-inner {
         grid-template-columns: 1fr;
         justify-items: center;
         text-align: center;
-        gap: 16px
+        gap: 16px;
     }
 
     .ft__selectors {
-        flex-direction: column
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .ft__select {
+        width: 100%;
+    }
+
+    .ft__select select {
+        min-width: 0;
+        width: 100%;
     }
 
     .ft__legal {
         grid-template-columns: 1fr;
         justify-items: center;
         text-align: center;
-        gap: 12px
+        gap: 12px;
+    }
+
+    .ft__links {
+        gap: 14px;
+        row-gap: 10px;
     }
 }
 
-@media (max-width: 420px) {
+/* ===== Clean mobile layout (phones ≤ 600px) ===== */
+@media (max-width: 600px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    /* Top cluster */
+    .ft__top {
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 20px;
+        padding: 16px 1rem 8px;
+    }
+
+    .ft__brand-name {
+        margin-bottom: 8px;
+        font-size: .98rem;
+    }
+
+    /* Menu: simple vertical list, left-aligned */
     .ft__menu {
-        gap: 16px
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .ft__menu a {
+        justify-self: start;
+        font-size: 1rem;
+        opacity: .96;
+    }
+
+    /* Socials: smaller icons, tidy wrap */
+    .ft__socials {
+        gap: 10px;
+        margin-top: 4px;
+        justify-content: center;
+    }
+
+    .ft__socials-label {
+        font-size: 10px;
+        letter-spacing: .14em;
+        justify-content: center;
+    }
+
+    .ft__socials-icons {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .ft__socials-icons a {
+        width: 24px;
+        height: 24px;
+    }
+
+    .ft__socials-icons svg {
+        width: 13px;
+        height: 13px;
+    }
+
+    /* Divider */
+    .ft__rule {
+        margin: 10px 0 12px;
+        border-top-color: #31373e;
+    }
+
+    /* Mid: disclaimer first, rating centered below */
+    .ft__mid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 10px 0 14px;
+    }
+
+    .ft__disclaimer {
+        font-size: 0.8rem;
+        line-height: 1.55;
+        color: #c3c9cf;
+        padding-left: 0rem;
+        text-align: center;
+    }
+
+    .ft__rating {
+        justify-self: center;
     }
 
     .ft__rating img {
-        height: 72px
+        height: 58px;
+        border-color: #2a3036;
+    }
+
+    /* Bottom: brand + links + selectors stacked */
+    .ft__bottom-inner {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        gap: 12px;
+        padding: 14px 0;
+    }
+
+    .ft__company-logo {
+        height: 4.5rem;
+    }
+
+    .ft__links {
+        flex-wrap: wrap;
+        gap: 10px 16px;
+    }
+
+    .ft__selectors {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .ft__select {
+        width: 100%;
+        gap: 4px;
+        padding-left: 0.8rem;
+    }
+
+    .ft__select span {
+        font-size: .85rem;
+        opacity: .95;
     }
 
     .ft__select select {
-        min-width: 100%
+        width: 80%;
+        min-width: 0;
+        padding: 10px 12px;
+        border-radius: 10px;
+        border-color: #2a3036;
+        background: #1b2025;
+    }
+
+    /* Legal row */
+    .ft__legal {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        gap: 10px;
+        padding: 10px 0 16px;
+    }
+
+    .ft__legal-links {
+        gap: 10px 14px;
+        justify-content: center;
+        font-size: 0.6rem;
+    }
+
+    .ft__privacy-choices {
+        padding: 6px 10px;
+        border-color: #2a3036;
+    }
+
+    .ft__trust img {
+        height: 34px;
+    }
+}
+
+/* ===== Very small phones ≤ 360px ===== */
+@media (max-width: 360px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .ft__menu a {
+        font-size: .95rem;
+    }
+
+    .ft__company-logo {
+        height: 4rem;
+    }
+
+    .ft__rating img {
+        height: 52px;
+    }
+
+    .ft__socials-icons a {
+        width: 22px;
+        height: 22px;
+    }
+
+    .ft__socials-icons svg {
+        width: 12px;
+        height: 12px;
     }
 }

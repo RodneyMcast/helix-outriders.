@@ -18,9 +18,8 @@ export default function Footer() {
           </nav>
         </div>
 
-        <div className="ft__socials">
-          <span className="ft__socials-label">Join the conversation</span>
-          <div className="ft__socials-icons" aria-label="Social links">
+       
+              <div className="ft__socials-icons" aria-label="Social links">
             {/* Replace href with your profiles */}
             <a aria-label="Facebook" href="#"><svg viewBox="0 0 24 24"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H8v3h3v7h3v-7h3l1-3h-4V9c0-.6.4-1 1-1z"/></svg></a>
             <a aria-label="X" href="#"><svg viewBox="0 0 24 24"><path d="M3 4l7.5 8.2L3.6 20H7l5-5.7L16.8 20H21l-8-8.7L20.4 4H17L12 9.3 7.7 4z"/></svg></a>
@@ -30,7 +29,6 @@ export default function Footer() {
             <a aria-label="TikTok" href="#"><svg viewBox="0 0 24 24"><path d="M15 3c.6 2.2 2.3 3.9 4.5 4.5v3.2c-1.6 0-3.1-.5-4.5-1.5v5.7a6 6 0 11-4.5-5.9v3.3a2.7 2.7 0 101.8 2.6V3H15z"/></svg></a>
             <a aria-label="Discord" href="#"><svg viewBox="0 0 24 24"><path d="M20 5.5A19 19 0 0015.3 4l-.2.4c1.1.3 2.1.7 3 1.2-1.3-.6-2.7-1-4.1-1.1-.5 0-1 0-1.5 0s-1 0-1.5 0C8.6 4.5 7.2 5 5.9 5.6 6.8 5.1 7.8 4.7 8.9 4.4L8.7 4A19 19 0 004 5.5 16 16 0 002 14.6c1.8 1.3 3.6 2.1 5.3 2.6l.8-1.3c-.9-.3-1.8-.7-2.6-1.1.3.1.6.2 1 .4 2 .8 4.1 1.1 6.3 1.1s4.3-.4 6.3-1.1c.3-.1.6-.3 1-.4-.8.5-1.7.8-2.6 1.1l.8 1.3c1.7-.5 3.5-1.3 5.3-2.6A16 16 0 0020 5.5zM9.6 13.6a1.6 1.6 0 110-3.2 1.6 1.6 0 010 3.2zm4.8 0a1.6 1.6 0 110-3.2 1.6 1.6 0 010 3.2z"/></svg></a>
           </div>
-        </div>
       </div>
 
       <hr className="ft__rule" />
