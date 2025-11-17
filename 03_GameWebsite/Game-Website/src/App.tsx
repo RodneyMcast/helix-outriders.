@@ -3,6 +3,7 @@ import './styles.css'
 // Components
 import NavBar from './components/NavBar/NavBar'
 import Hero from './components/Hero/Hero'
+import GameDescription from './components/Game Description/game'
 import Pvpve from './components/PVPVE/pvpve'
 import PlatformRow from './components/PlatformRow/PlatformRow'
 import SignupSection from './components/Form/SignupSection'
@@ -14,6 +15,7 @@ export default function App() {
     <>
       <NavBar />
       <Hero />
+      <GameDescription />
       <Pvpve />
       <PlatformRow />
       <SignupSection />
