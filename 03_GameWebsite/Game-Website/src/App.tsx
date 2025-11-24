@@ -16,10 +16,10 @@ export default function App() {
       <NavBar />
       <Hero />
       <GameDescription />
+      <Reviews />
       <Pvpve />
       <PlatformRow />
       <SignupSection />
-      <Reviews />
       <Footer />
     </>
   )

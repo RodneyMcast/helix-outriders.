@@ -2,7 +2,14 @@ import React, { useEffect, useState } from 'react'
 import './NavBar.css'
 import logo from '../../Images/LOGO.png'
 
-type SectionKey = 'home' | 'platforms' | 'signup' | 'reviews' | 'footer'
+type SectionKey =
+  | 'home'
+  | 'story'
+  | 'modes'
+  | 'platforms'
+  | 'signup'
+  | 'reviews'
+  | 'footer'
 
 type NavItem = {
   key: SectionKey
@@ -13,8 +20,10 @@ type NavItem = {
 
 const NAV_ITEMS: NavItem[] = [
   { key: 'home', label: 'Home', selector: '.hero' },
+  { key: 'story', label: 'Story', selector: '.game-description' },
+  { key: 'modes', label: 'PvPvE', selector: '.pvpve' },
   { key: 'platforms', label: 'Platforms', selector: '.platform-row' },
-  { key: 'signup', label: 'Sign Up', selector: '#signup' },
+  { key: 'signup', label: 'Sign Up', selector: '.signup-section' },
   { key: 'reviews', label: 'Reviews', selector: '.reviews' },
   { key: 'footer', label: 'About', selector: 'footer.ft' }
 ]
@@ -83,7 +92,7 @@ export default function NavBar() {
             <button
               type="button"
               className="nav__cta"
-              onClick={() => handleNavClick({ key: 'signup', label: 'Sign Up', selector: '#signup' })}
+              onClick={() => handleNavClick({ key: 'signup', label: 'Sign Up', selector: '.signup-section' })}
             >
               Play Now
             </button>

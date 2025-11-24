@@ -141,6 +141,10 @@
 /* mobile toggle */
 .nav__toggle {
   display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.22rem;
   background: transparent;
   border: 0;
   cursor: pointer;
@@ -156,7 +160,6 @@
   width: 1.375rem;
   height: 0.125rem;
   background: #d7dee7;
-  margin: 0.25rem 0;
   border-radius: 0.125rem;
 }
 
@@ -191,16 +194,20 @@
     flex-direction: column;
     align-items: stretch;
     gap: 0.5rem;
-    padding: 0.75rem 1rem;
+    padding: 0 1rem;
     max-height: 0;
     overflow: hidden;
     transition: max-height .2s ease;
     background: linear-gradient(180deg, var(--nav-navy) 0%, #0e1626 100%);
     border-bottom: 0.0625rem solid var(--nav-stroke);
+    box-shadow: 0 14px 30px rgba(0,0,0,.32);
   }
-  .nav__menu.is-open { max-height: 22rem; }
-  .nav__link { text-align: left; padding: 0.75rem 0; }
-  .nav__cta { width: 100%; padding: 0.8rem 1rem; }
+  .nav__menu.is-open {
+    max-height: 24rem;
+    padding: 0.75rem 1rem 1rem;
+  }
+  .nav__link { text-align: center; padding: 0.8rem 0.4rem; }
+  .nav__cta { width: 100%; padding: 0.85rem 1rem; }
   :root { --brand-scale: 0.9; }
 }
 
@@ -215,6 +222,8 @@
 .platform-row,
 .signup-section,
 .reviews,
+.pvpve,
+.game-description,
 .ft {
   scroll-margin-top: var(--nav-height);
 }

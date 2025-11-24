@@ -3,7 +3,7 @@ import "../Form/SignupSection.css";
 
 const SignupSection = () => {
   return (
-    <section className="signup-section">
+    <section className="signup-section" id="signup">
       <div className="signup-container">
         <h2 className="signup-title">
           SIGN UP FOR <span>GAME NEWS</span>
