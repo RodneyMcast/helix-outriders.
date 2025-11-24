@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './NavBar.css'
 import logo from '../../Images/LOGO.png'
 
@@ -31,12 +31,24 @@ const NAV_ITEMS: NavItem[] = [
 export default function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const navRef = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 10)
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  useEffect(() => {
+    if (!menuOpen) return
+    const handlePointerDown = (event: PointerEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setMenuOpen(false)
+      }
+    }
+    document.addEventListener('pointerdown', handlePointerDown)
+    return () => document.removeEventListener('pointerdown', handlePointerDown)
+  }, [menuOpen])
 
   const scrollToSelector = (selector: string) => {
     const el = document.querySelector(selector) as HTMLElement | null
@@ -51,7 +63,7 @@ export default function NavBar() {
   }
 
   return (
-    <nav className={`nav ${isScrolled ? 'nav--scrolled' : ''}`} aria-label="Primary">
+    <nav ref={navRef} className={`nav ${isScrolled ? 'nav--scrolled' : ''}`} aria-label="Primary">
       <div className="nav__inner container">
         <button
           className="nav__brand"

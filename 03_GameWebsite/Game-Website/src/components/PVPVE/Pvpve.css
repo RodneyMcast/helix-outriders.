@@ -123,9 +123,12 @@
   margin: 0 auto;
 }
 
-.pvpve__copy { 
-  display: grid; 
-  align-content: center; 
+.pvpve__copy {
+  display: grid;
+  align-content: center;
+  justify-self: start;
+  text-align: left;
+  max-width: 34ch;
 }
 
 .pvpve__title {
@@ -209,11 +212,17 @@
   .step--two::after,
   .step--three::after { display: none; }
   .pvpve__inner { gap: clamp(20px, 6vw, 36px); }
-  .pvpve__copy { text-align: center; }
+  .pvpve__copy {
+    text-align: center;
+    padding-inline: 10px;
+  }
   .pvpve__title { font-size: clamp(2.3rem, 11vw, 3.8rem); }
   .pvpve__tag {
     margin-left: 0;
     font-size: clamp(0.95rem, 3.3vw, 1.05rem);
+    padding-inline: 12px;
+    max-width: 38ch;
+    margin-inline: auto;
   }
   .pvpve__polaroid {
     width: min(360px, 88vw);
@@ -228,4 +237,9 @@
     justify-content: center;
   }
   .step { letter-spacing: .14em; }
+  .pvpve__tag {
+    letter-spacing: 0.12em;
+    line-height: 1.35;
+    padding-inline: 8px;
+  }
 }

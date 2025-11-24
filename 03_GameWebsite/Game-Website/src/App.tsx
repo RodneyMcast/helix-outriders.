@@ -5,7 +5,6 @@ import NavBar from './components/NavBar/NavBar'
 import Hero from './components/Hero/Hero'
 import GameDescription from './components/Game Description/game'
 import Pvpve from './components/PVPVE/pvpve'
-import PlatformRow from './components/PlatformRow/PlatformRow'
 import SignupSection from './components/Form/SignupSection'
 import Reviews from './components/Reviews/Reviews'
 import Footer from './components/Footer/Footer'
@@ -18,7 +17,6 @@ export default function App() {
       <GameDescription />
       <Reviews />
       <Pvpve />
-      <PlatformRow />
       <SignupSection />
       <Footer />
     </>
