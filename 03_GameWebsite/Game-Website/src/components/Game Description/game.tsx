@@ -12,7 +12,7 @@ export default function GameDescription() {
       <div className="game-description__panel">
         <div className="game-description__content">
           <p className="game-description__eyebrow" id="game-description-heading">
-            🧬 HELIX OUTRIDERS — AVAILABLE NOW
+            &#129516; HELIX OUTRIDERS &mdash; AVAILABLE NOW
           </p>
 
           <p className="game-description__body">
@@ -26,11 +26,11 @@ export default function GameDescription() {
           </p>
 
           <p className="game-description__body">
-            When you fall, your Echo rises — your own corpse turned enemy. Defeat it to reclaim your loadout, your
+            When you fall, your Echo rises &mdash; your own corpse turned enemy. Defeat it to reclaim your loadout, your
             samples, and your humanity.
           </p>
 
-          <p className="game-description__tagline">Extraction isn’t survival. It’s evolution.</p>
+          <p className="game-description__tagline">Extraction isn't survival. It's evolution.</p>
 
           <button type="button" className="game-description__cta">
             PLAY NOW
@@ -47,7 +47,7 @@ export default function GameDescription() {
             loop
             playsInline
           >
-            Sorry, your browser doesn’t support embedded videos.
+            Sorry, your browser doesn't support embedded videos.
           </video>
         </figure>
       </div>
