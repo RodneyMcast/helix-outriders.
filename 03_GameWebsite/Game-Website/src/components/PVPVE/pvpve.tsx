@@ -1,5 +1,4 @@
 import './Pvpve.css'
-// Importing image ensures Vite bundles it correctly (handles spaces in filename)
 import artboard from '../../Images/Artboard 1 1.png'
 
 export default function Pvpve() {
@@ -7,7 +6,6 @@ export default function Pvpve() {
     <section className="pvpve" aria-label="PvPvE mode">
       <div className="pvpve__bg" aria-hidden="true" />
 
-      {/* Top steps row */}
       <div className="pvpve__top">
         <span className="step step--one">1. DEPLOY</span>
         <span className="step step--two">2. ELIMINATE</span>

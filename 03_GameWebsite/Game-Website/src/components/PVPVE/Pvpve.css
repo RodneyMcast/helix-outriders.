@@ -1,4 +1,3 @@
-/* Section layout and background */
 .pvpve {
   position: relative;
   isolation: isolate;
@@ -17,7 +16,6 @@
     linear-gradient(180deg, #0E1A2E 0%, #0B1526 60%, #0A1322 100%);
 }
 
-/* Steps at the very top */
 .pvpve__top {
   position: absolute;
   top: clamp(12px, 2.4vw, 22px);
@@ -29,11 +27,10 @@
   pointer-events: none;
   text-transform: uppercase;
   font-family: 'Couture', system-ui, sans-serif;
-  letter-spacing: .06em; /* ≈6% */
+  letter-spacing: .06em;
   z-index: 2;
 }
 
-/* Soft blurred top band behind the steps */
 .pvpve__top::before {
   content: '';
   position: absolute;
@@ -47,31 +44,23 @@
 }
 
 .step {
-  /* Base type */
   position: relative;
-  padding: .05rem 0; /* tighter */
+  padding: .05rem 0;
   font-weight: 700;
-  font-size: clamp(1.25rem, 2.1vw, 2.5rem); /* ≈40px on desktop */
+  font-size: clamp(1.25rem, 2.1vw, 2.5rem);
   line-height: 1.05;
   opacity: .99;
-
-  /* Gentle bevel */
   -webkit-text-stroke: .55px rgba(0,0,0,.3);
   text-stroke: .55px rgba(0,0,0,.3);
   text-shadow:
     0 -0.5px 0 rgba(0,0,0,.35),
     0 1px 0 rgba(255,255,255,.12),
     0 6px 12px rgba(0,0,0,.22),
-    0 0 6px rgba(160,0,0, calc(var(--blood, 0) * .55)); /* faint inner-red glow */
-
-  /* White as primary with a red band inside the letters */
-  --blood: 0; /* overridden per step */
+    0 0 6px rgba(160,0,0, calc(var(--blood, 0) * .55));
+  --blood: 0;
   background:
-    /* top sheen */
     linear-gradient(180deg, rgba(255,255,255,.45) 0%, rgba(255,255,255,.22) 28%, rgba(255,255,255,0) 30%),
-    /* inner blood band through the middle */
     linear-gradient(180deg, transparent 42%, hsla(0, 72%, 44%, var(--blood)) 50%, hsla(0, 72%, 36%, calc(var(--blood) * .85)) 58%, transparent 62%),
-    /* base white */
     linear-gradient(180deg, rgba(255,255,255,.98) 0%, rgba(248,248,248,.94) 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -81,11 +70,6 @@
 .step--two { --blood: .8; }
 .step--three { --blood: 5; }
 
-/* Gradient text for red and gold variants */
-/* stronger highlight for colored steps */
-/* Remove previous colored background overrides */
-
-/* Bloody smear under 2 and 3 */
 .step--two::after,
 .step--three::after {
   content: '';
@@ -111,9 +95,6 @@
     radial-gradient(10px 8px at 88% 68%, rgba(120,8,8,.55), transparent 70%);
 }
 
-/* No pill background — rely on the top band below */
-
-/* Two-column content */
 .pvpve__inner {
   display: grid;
   grid-template-columns: 1.1fr .9fr;
@@ -153,8 +134,7 @@
   text-shadow: 0 6px 22px rgba(0,0,0,.4);
 }
 
-/* Image only (your asset already includes the white frame + blood) */
-.pvpve__polaroid { /* acts as wrapper for positioning/rotation only */
+.pvpve__polaroid {
   position: relative;
   width: clamp(280px, 34vw, 520px);
   transform: rotate(7deg);
@@ -167,7 +147,6 @@
   height: auto;
 }
 
-/* Responsive */
 @media (max-width: 920px) {
   .pvpve__inner {
     grid-template-columns: 1fr;

@@ -6,7 +6,6 @@ type SectionKey =
   | 'home'
   | 'story'
   | 'modes'
-  | 'platforms'
   | 'signup'
   | 'reviews'
   | 'footer'
@@ -14,7 +13,6 @@ type SectionKey =
 type NavItem = {
   key: SectionKey
   label: string
-  // CSS selector to find the section (so we don't need to add ids everywhere)
   selector: string
 }
 
@@ -22,7 +20,6 @@ const NAV_ITEMS: NavItem[] = [
   { key: 'home', label: 'Home', selector: '.hero' },
   { key: 'story', label: 'Story', selector: '.game-description' },
   { key: 'modes', label: 'PvPvE', selector: '.pvpve' },
-  { key: 'platforms', label: 'Platforms', selector: '.platform-row' },
   { key: 'signup', label: 'Sign Up', selector: '.signup-section' },
   { key: 'reviews', label: 'Reviews', selector: '.reviews' },
   { key: 'footer', label: 'About', selector: 'footer.ft' }

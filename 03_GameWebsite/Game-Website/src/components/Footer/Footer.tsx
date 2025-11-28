@@ -52,7 +52,7 @@ export default function Footer() {
         <div className="container ft__bottom-inner">
           {/* Company mark — replace with your studio SVG */}
           <div className="ft__company">
-            <img className="ft__company-logo" src="src/Images/StudioLogo.png" alt="Company logo" />
+            <img className="ft__company-logo" src="src\Images\ChatGPT Image Nov 8, 2025, 11_13_14 AM.png" alt="Company logo" />
           </div>
 
           <nav className="ft__links">
